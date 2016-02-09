@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="http://boehm-erwan.cloudapp.net/css/index.css">
+</head>
+<body>
+  <div id="loading" class="disableLoading">
+    <img src="http://boehm-erwan.cloudapp.net/assets/loader.gif">
+  </div>
+
+  <div id="header">
+    <img id="logo" src="http://boehm-erwan.cloudapp.net/assets/logo.png">
+    <span id="devise">Buy some time</span><br/>
+    <div id="containerRight">
+      <span id="phone">+33 6 84 47 78 63</span>
+      <span id="email"><a style="color:white" href="mailto:contact@optionizr.com">contact@optionizr.com</a></span>
+    </div>
+  </div>
+  
+  <div class="listview" id="srch">
+        
+    <div class="input-field col s12">
+      <select id="departure">
+	<option value="" disabled selected>Select an airport</option>
+      </select>
+      <label>Departure</label>
+    </div>
+    
+    <div class="input-field col s12">
+      <select id="destination">
+	<option value="" disabled selected>Select an airport</option>
+      </select>
+      <label>Destination</label>
+    </div>
+    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <form action="#">
+	<input type="checkbox" id="travelType" />
+	<label for="travelType">One way</label>
+    </form>
+    
+    <div class="input-field col s12">
+      <input type="checkbox" id="traveltype"/>
+    </div>
+    Departure date : <input type="date" class="datepicker" id="outbounddate"><br/>
+    <span id="return">Return date:</span> <input type="date" class="datepicker" id="returndate"><br/>
+    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    adultes : <select id="adultcount"></select>
+    enfants : <select id="childcount"></select>
+    bebes : <select id="infantcount"></select><br/>
+    <a class="waves-effect waves-light btn-large" id="search">Search</a>
+  </div>
+
+</body>
+<!--<script src="http://localhost/CODECAMP/tests/views/js/index.js"></script>-->
+<script src="http://boehm-erwan.cloudapp.net/js/index.js"></script> 
+<!-- materializecss -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+
+<script>
+  $(document).ready(function() {
+  $('select').material_select();
+  });
+  $('.datepicker').pickadate({
+  selectMonths: true, // Creates a dropdown to control month
+  selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+</script>
+</html>
